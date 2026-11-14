@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teacher Toolkit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7FAFC; --ink:#1B2B3A; --muted:#5A6B7B; --line:#DCE5EC;
+  --yellow:#FFC93C; --blue:#2F6FED; --pink:#FF8FA3; --green:#3DBE8B; --purple:#8A6CF0;
+  --head:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* Header: a pencil-box stripe of colour is the one memorable thing */
+.stripe{display:flex;height:10px}
+.stripe i{flex:1}
+.stripe i:nth-child(1){background:var(--yellow)}
+.stripe i:nth-child(2){background:var(--pink)}
+.stripe i:nth-child(3){background:var(--blue)}
+.stripe i:nth-child(4){background:var(--green)}
+.stripe i:nth-child(5){background:var(--purple)}
+
+header.top{padding:18px 0;border-bottom:1px solid var(--line);background:#fff}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-family:var(--head);font-weight:600;font-size:1.35rem;text-decoration:none}
+nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:56px 0 36px}
+.hero h1{font-family:var(--head);font-weight:600;font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.1;margin:0 0 14px;max-width:16ch}
+.hero p{max-width:52ch;color:var(--muted);font-size:1.1rem;margin:0}
+
+section.group{padding:26px 0 8px}
+section.group h2{font-family:var(--head);font-weight:600;font-size:1.5rem;margin:0 0 4px}
+section.group .sub{color:var(--muted);margin:0 0 16px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.tool{position:relative;background:#fff;border:1px solid var(--line);border-left:10px solid var(--c);border-radius:10px;padding:16px 18px 18px}
+.tool h3{font-family:var(--head);font-weight:600;font-size:1.2rem;margin:0 0 6px}
+.tool p{margin:0 0 12px;color:var(--muted);font-size:.98rem}
+.chip{display:inline-block;font-size:.85rem;font-weight:700;padding:2px 10px;border-radius:99px;background:#EEF3F7;color:var(--muted)}
+.chip.next{background:#FFF1C2;color:#7A5A00}
+a.tool{display:block;text-decoration:none}
+a.tool:hover{border-color:var(--c)}
+
+footer{margin-top:48px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Teacher Toolkit</a>
+    <nav aria-label="Main">
+      <a href="#planning">Planning</a>
+      <a href="#classroom">Classroom</a>
+      <a href="#faith">Faith</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Simple tools that give teachers time back.</h1>
+      <p>Free, quick, and built by a foundation phase teacher. Pick a tool, use it, and get back to your learners.</p>
+    </div>
+
+    <section class="group" id="planning">
+      <h2>Planning and reports</h2>
+      <p class="sub">Less typing, more teaching.</p>
+      <div class="grid">
+        <!-- When a tool is built, change its <div> to <a href="tools/xxx.html"> and set the chip to "Open". -->
+        <div class="tool" style="--c:var(--yellow)">
+          <h3>Report comment generator</h3>
+          <p>Build thoughtful, personal report comments in minutes.</p>
+          <span class="chip next">Building first</span>
+        </div>
+        <div class="tool" style="--c:var(--blue)">
+          <h3>Rubric designer</h3>
+          <p>Create clear, printable rubrics for any task.</p>
+          <span class="chip">Coming soon</span>
+        </div>
+        <div class="tool" style="--c:var(--pink)">
+          <h3>Worksheet designer</h3>
+          <p>Make neat, print-ready worksheets for your grade.</p>
+          <span class="chip">Coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" id="classroom">
+      <h2>In the classroom</h2>
+      <p class="sub">Tools to run the room and settle the class.</p>
+      <div class="grid">
+        <div class="tool" style="--c:var(--green)">
+          <h3>Fun timer</h3>
+          <p>A big, colourful countdown learners can watch.</p>
+          <span class="chip next">Quick win</span>
+        </div>
+        <div class="tool" style="--c:var(--purple)">
+          <h3>Mindfulness corner</h3>
+          <p>Calm instrumental music and doodle time to reset the class.</p>
+          <span class="chip next">Quick win</span>
+        </div>
+        <div class="tool" style="--c:var(--blue)">
+          <h3>Read alouds</h3>
+          <p>Stories read to your class, all in one place.</p>
+          <span class="chip">Coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="group" id="faith">
+      <h2>Faith resources</h2>
+      <p class="sub">For Christian classrooms.</p>
+      <div class="grid">
+        <div class="tool" style="--c:var(--yellow)">
+          <h3>Worship video hub</h3>
+          <p>Worship videos gathered so you can find them fast.</p>
+          <span class="chip">Coming soon</span>
+        </div>
+        <div class="tool" style="--c:var(--pink)">
+          <h3>Devotionals and Bible curriculum</h3>
+          <p>Your own devotional resource and lessons.</p>
+          <span class="chip">Later</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Teacher Toolkit. Made for teachers, by a teacher.</div>
+</footer>
+
+</body>
+</html>
